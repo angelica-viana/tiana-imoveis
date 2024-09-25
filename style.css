@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+}
+header .header-logo {
+  display: flex;
+  width: 20%;
+  margin-left: 100px;
+}
+header img {
+  margin-top: 100px;
+}
+header .linha {
+  height: 3px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fbaf28;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo img {
+    width: 160px;
+    margin-left: -50px;
+    margin-top: 50px;
+  }
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg-home {
+  position: relative;
+}
+
+.bg-home::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../assets/imgfundo.png");
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  opacity: 0.9;
+}
+
+.hero {
+  color: #FFF;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+}
+.hero h1 {
+  color: #000;
+  font-weight: bold;
+  font-size: 100px;
+  max-width: 940px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.hero p {
+  color: #000;
+  font-size: 33px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.button-contact {
+  padding: 14px 28px;
+  color: #FFF;
+  background-color: #d9aa4d;
+  width: 200px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: 50px;
+  border: 0;
+  background-image: linear-gradient(90deg, #ffde59, #ff914d);
+}
+
+.button-contact:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.07);
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .hero h1 {
+    font-size: 60px;
+    width: 100%;
+    margin-left: 30px;
+  }
+  .hero p {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .button-contact {
+    margin-left: 30px;
+  }
+}
+.about {
+  background-image: linear-gradient(150deg, #FFFFFF, #d3d0d0);
+  overflow: hidden;
+  color: #000;
+}
+
+.about-content img {
+  max-width: 950px;
+  border-radius: 20px;
+  gap: 14px;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hero .creci {
+  font-size: 20px;
+}
+
+.text-paragraf {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.button-mensagem {
+  display: flex;
+  padding: 14px 28px;
+  color: #FFF;
+  background-color: #d9aa4d;
+  width: 290px;
+  border-radius: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 600px;
+  margin-bottom: 50px;
+  border: 0;
+  background-image: linear-gradient(90deg, #ffde59, #ff914d);
+}
+
+.button-mensagem:hover {
+  animation: scaleButton 0.8s alternate infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .about-content img {
+    max-width: 350px;
+  }
+  .text-paragraf {
+    font-size: 25px;
+  }
+  .button-mensagem {
+    padding: 12px 20px;
+    width: 200px;
+    margin-left: 100px;
+  }
+  .hero .creci {
+    font-size: 14px;
+  }
+}
+.contact {
+  background-image: linear-gradient(150deg, #FFFFFF, #d3d0d0);
+  overflow: hidden;
+  color: #000;
+}
+
+.title-contact {
+  font-size: 70px;
+  padding: 40px;
+  font-weight: bold;
+}
+
+.contato {
+  font-size: 20px;
+  padding-left: 40px;
+}
+
+.subtitle {
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.descricao {
+  margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+  .title-contact {
+    font-size: 50px;
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 0;
+}
+
+.img-footer {
+  width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .descricao-footer {
+    display: flex;
+    text-align: center;
+    font-size: 15px;
+  }
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 14px;
+  right: 24px;
+  z-index: 99;
+}
+.btn-whatsapp img {
+  max-width: 74px;
+  transition: transform 0.4s;
+}
+.btn-whatsapp img:hover {
+  transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+}
+
+.btn-whatsapp .tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  width: 120px;
+  top: 8px;
+  left: -144px;
+  padding: 6px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fbaf28;
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-whatsapp {
+    max-width: 64px;
+  }
+}
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #FFF;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
